@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_compilers version="2.0">
+
+<compiler MACH="hobb">
+<!--
+  <CFLAGS>
+    <append>-I/usr/include -I/usr/include/hdf5/serial</append>
+  </CFLAGS>
+  <FFLAGS>
+	  <append>-I/usr/include</append>
+  </FFLAGS>
+-->
+  <NETCDF_PATH>/usr/local/share/netcdf_linked/</NETCDF_PATH>
+  <PNETCDF_PATH>/usr/local</PNETCDF_PATH>
+  <SLIBS>
+    <append>-L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lnetcdff -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -lnetcdf -lnetcdf -ldl -lm</append>
+  </SLIBS>
+</compiler>
+
+</config_compilers>
