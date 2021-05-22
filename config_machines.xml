@@ -3,9 +3,9 @@
 <config_machines version="2.0">
   <machine MACH="hobb">
     <DESC>
-      8-core Ubuntu 18.04 desktop system.
+      6-core Ubuntu 20.04 desktop system with hyperthreading.
     </DESC>
-    <NODENAME_REGEX>DESKTOP-KBTR7FG</NODENAME_REGEX>
+    <NODENAME_REGEX>hobb</NODENAME_REGEX>
     <OS>LINUX</OS>
     <PROXY> https://howto.get.out </PROXY>
     <COMPILERS>gnu</COMPILERS>
@@ -15,15 +15,15 @@
     <CIME_OUTPUT_ROOT>/scratch/${USER}/tmp/cesm</CIME_OUTPUT_ROOT>
     <DIN_LOC_ROOT>/buffalo/data/cesm-input/</DIN_LOC_ROOT>
     <DIN_LOC_ROOT_CLMFORC>/buffalo/data/cesm-input/lmwg</DIN_LOC_ROOT_CLMFORC>
-    <DOUT_S_ROOT>/buffalo/data/cesm/archive/$CASE</DOUT_S_ROOT>
+    <DOUT_S_ROOT>$CASEROOT/archive</DOUT_S_ROOT>
     <BASELINE_ROOT>/buffalo/data/cesm/cesm_baselines</BASELINE_ROOT>
     <CCSM_CPRNC>/buffalo/data/cesm/tools/cime/tools/cprnc/cprnc</CCSM_CPRNC>
     <GMAKE>make</GMAKE>
-    <GMAKE_J>8</GMAKE_J>
+    <GMAKE_J>12</GMAKE_J>
     <BATCH_SYSTEM>none</BATCH_SYSTEM>
     <SUPPORTED_BY>taobrien@lbl.gov</SUPPORTED_BY>
-    <MAX_TASKS_PER_NODE>8</MAX_TASKS_PER_NODE>
-    <MAX_MPITASKS_PER_NODE>8</MAX_MPITASKS_PER_NODE>
+    <MAX_TASKS_PER_NODE>12</MAX_TASKS_PER_NODE>
+    <MAX_MPITASKS_PER_NODE>6</MAX_MPITASKS_PER_NODE>
     <PROJECT_REQUIRED>FALSE</PROJECT_REQUIRED>
     <mpirun mpilib="default">
       <executable>mpirun</executable>
