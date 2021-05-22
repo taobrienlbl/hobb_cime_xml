@@ -7,7 +7,7 @@ Clone this repository and place it in your home directory as `~/.cime`, e.g.:
 CESM simulations can then be run by specifying `--machine hobb`, e.g.:
 
 ```bash
-~/CESM2.2.0/cime/scripts/create_newcase \
+/usr/local/share/CESM2.2.0/cime/scripts/create_newcase \
     --compset FDABIP04 \
     --res T42z30_T42_mg17 \
     --case dabi \
